@@ -1,10 +1,11 @@
-package projeto_api.domain.model;
+package projeto_api_2.domain.model;
+
 
 import jakarta.persistence.*;
 
 import java.math.BigDecimal;
 
-@Entity(name = "tb-cartao")
+@Entity
 public class Cartao {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -13,7 +14,7 @@ public class Cartao {
     @Column(unique = true)
     private String numero;
 
-    @Column( scale = 10, precision = 2)
+    @Column( scale = 2, precision = 10)
     private BigDecimal limite;
 
     public Cartao() {

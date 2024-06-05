@@ -1,11 +1,11 @@
-package projeto_api.domain.model;
+package projeto_api_2.domain.model;
 
 import jakarta.persistence.*;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 
-@Entity(name = "tb-user")
+
+@Entity
 public class Usuario {
 
     @Id
@@ -14,16 +14,16 @@ public class Usuario {
 
     private String nome;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne
     private Conta conta;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne
     private Cartao cartao;
 
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @OneToMany
     private List<Funcionalidade> funcionalidades;
 
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @OneToMany
     private List<Novidade> novidades;
 
     public Long getId() {

@@ -1,10 +1,9 @@
-package projeto_api.domain.model;
+package projeto_api_2.domain.model;
 
 import jakarta.persistence.*;
-
 import java.math.BigDecimal;
 
-@Entity(name = "tb-conta")
+@Entity
 public class Conta {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -15,10 +14,10 @@ public class Conta {
 
     private String agencia;
 
-    @Column( scale = 10, precision = 2)
+    @Column( scale = 2, precision = 10)
     private BigDecimal saldo;
 
-    @Column( scale = 10, precision = 2)
+    @Column( scale = 2, precision = 10)
     private BigDecimal limite;
 
     public Conta() {

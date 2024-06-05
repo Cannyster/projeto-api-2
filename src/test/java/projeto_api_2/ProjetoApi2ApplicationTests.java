@@ -1,4 +1,4 @@
-package projeto_api;
+package projeto_api_2;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

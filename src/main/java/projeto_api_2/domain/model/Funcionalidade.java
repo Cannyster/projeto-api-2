@@ -1,8 +1,8 @@
-package projeto_api.domain.model;
+package projeto_api_2.domain.model;
 
 import jakarta.persistence.Entity;
 
-@Entity(name = "tb-funcionalidade")
+@Entity
 public class Funcionalidade extends BaseItem {
 
 }
